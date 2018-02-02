@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
+    <script src="funcionsHipoteca.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "container">
+    <form action="#" onsubmit="return calcularQuota()">
+        <div >
+        <div class="form-group"><!--l'usuari introdueix el dia inicial en el que es comencen a pagar les quotes-->
+          <label for="diaInicial">Dia inci pagament de quota</label><!--només podem posar dia 1r de cada mes-->
+          <input type="date" class="form-control" id="diaInicial" name="diaInicial">
+        </div>
+        <div class="form-group">
+          <label for="capital">Capital</label><!--no pot ser superior a 1 milió d'euros-->
+          <input type="double" class="form-control" id="capital" name="capital">
+        </div>
+        <div class="form-group">
+            <label for="interessos">Interessos</label><!--pot ser un nombre real-->
+            <input type="double" step= ".01" class="form-control" id="interessos" name="interessos">
+        </div>
+        <div class="form-group">
+            <label for="termini">Termini en mesos</label><!--no pot ser superior a 40 anys-->
+            <input type="number" class="form-control" id="termini" name="termini"> 
+        </div>  
+        <div>
+        <button type="submit" class="btn btn-default">Submit</button>
+        </div>  
+      </form>
+    </div>
+</body>
+</html>
